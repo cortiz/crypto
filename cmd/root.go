@@ -39,9 +39,6 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 	var format string
-	rootCmd.PersistentFlags().StringVar(&format, "output", "", "Ouput format (default text) ")
+	rootCmd.PersistentFlags().StringVarP(&format, "output","o", "text", "Ouput format ")
 
-	// Cobra also supports local flags, which will only run
-	// when this action is called directly.
-	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
